@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap kısmı -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- site icin icon ve title -->
+    <link rel="shortcut icon" type="x-icon" href="movie.png">
+    <title>MovieLand!</title>
+    <!-- jquery icin -->
+    <script src="https://kit.fontawesome.com/ca7af6d64a.js" crossorigin="anonymous"></script>
+    <!-- düzenleme yaptığımız css sayfası -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- jquerynin bilgisayardaki adresi -->
+    <script src="C:\Users\Selin Paksoy\Desktop\ustortproje\proje1\jquery-3.6.0.js"></script>
+    <!-- navbar kısmı -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg  navbar-dark  fixed-top">
+            <img src="film-reel.png" width="35" height="30">
+            <a class="navbar-brand" href="#testimonial"> MovieLand!</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" collapse="navCollapsed" id="navbarTogglerDemo01">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonial">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Movies
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#popular">All About</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#another">Another Round</a>
+                            <a class="dropdown-item" href="#spider">Spiderman No Way Home</a>
+                            <a class="dropdown-item" href="#love">In the Mood for Love</a>
+                            <a class="dropdown-item" href="#nomad">Nomadland</a>
+
+
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comment">Comments</a>
+                    </li>
+                    <!-- dropdown acıldıktan sonra kendiliğinden kapanması icin JS kodu -->
+                    <script>
+                        $scope.activateTab = function (tabId) {
+                            if (tabId != 'administration-tab') {
+                                $scope.navCollapsed = true;
+                            }
+                            $scope.activeTab = tabId;
+
+                        };
+                    </script>
+                    <!-- bu kısımda telefon ve tablet kullanımlarında navbar acıldığında kendiliğinden kapanması icin yapmaya calıstık ama olmadı -->
+
+                    <!--<script>
+                        $('.navbar-collapse a').click(function () {
+                            $(".navbar-collapse").collapse('hide');
+                        })
+                            ;
+                    </script> -->
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <!--  sitenin basındaki hosgeldiniz kısmı -->
+    <section id="testimonial">
+        <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active container-fluid">
+                    <h2 class="testimonial-text">Welcome to MovieLand!</h2>
+                    <br>
+                    <p style="float: left;"><img src="cin.png" width="150" height="150"></p>
+                    <br>
+                    <p> Have trouble choosing movies? Let us show you the most popular movies of the last week!</p>
+
+
+                </div>
+                <div class="carousel-item container-fluid">
+                    <h2 class="testimonial-text">Have you watched the 4 most popular movies of this week?</h2>
+                    <br>
+                    <p style="float: left;"><img src="popcorn.png" width="150" height="150"></p>
+                    <br>
+                    <p>Share your comments with us! <br>Also, don't forget to rate the movies:)</p>
+
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- home kısmı -->
+    <div id="home">
+        <div class="container-fluid ">
+            <h1 id="popular">Popular Films This Week</h1>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                    <div class="gallery">
+                        <a target="_blank" href="https://www.imdb.com/title/tt10288566/">
+                            <img src="anotherround.jpg" style="max-width:100%;" width="600" height="400" />
+
+                        </a>
+                        <div class="desc">Another Round</div>
+
+                    </div>
+                </div>
+                <!-- responsive tasarım icin her ekrana uygun posterlerin konumu değisecek -->
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                    <div class="gallery">
+                        <a target="_blank" href="https://www.imdb.com/title/tt10872600/">
+                            <img src="spiderman.jpg" style="max-width:100%;" width="600" height="400">
+                        </a>
+                        <div class="desc">Spiderman No Way Home</div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                    <div class="gallery">
+                        <a target="_blank" href="https://www.imdb.com/title/tt0118694/?ref_=nv_sr_srsg_2">
+                            <img src="love.jpg" style="max-width:100%;" width="600" height="400">
+                        </a>
+                        <div class="desc">In the Mood for Love </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                    <div class="gallery">
+                        <a target="_blank" href="https://www.imdb.com/title/tt9770150/?ref_=fn_al_tt_1">
+                            <img src="nomadland.jpg" style="max-width:100%;" width="600" height="400">
+                        </a>
+                        <div class="desc">Nomadland </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- filmler hakkındaki bilgilerin bulunduğu kısım -->
+    <div id="about">
+        <div class="container-fluid">
+            <h1>All About to Popular Movies</h1>
+
+            <h4 id="another">Another Round</h4>
+            <p><em>Another Round — the original title Druk, Danish for a bender, is better — reunites Vinterberg,
+                    Lindholm and Mikkelsen after 2012’s The Hunt.
+                    In that one, Mikkelsen played a kindergarten teacher wrongly accused of being a paedophile.
+                    Here he moves up the Danish educational system to play secondary-school history teacher
+                    Martin,
+                    whose work life and home life have lost their spark.
+                    Meeting with similarly lacklustre colleagues — sports teacher Tommy (Thomas Bo Larsen),
+                    music head
+                    Peter (Lars Ranthe) and ringleader Nikolaj (Magnus Millang) — at a raucous birthday dinner,
+                    the
+                    oldies hatch a plan inspired by Norwegian psychologist Finn Skårderud’s controversial thesis
+                    that
+                    most people go through life with too little alcohol in their bloodstream.
+                    Citing some famous functioning alcoholics (Winston Churchill, Ernest Hemingway), the four
+                    make a
+                    pact to stay low-level drunk all day, monitoring and recording the results with scientific
+                    empiricism. </em></p>
+            <div class="details">
+                <p><em>Genre: Comedy, Drama</em></p>
+                <p><em>Original Language: Danish</em></p>
+                <p><em>Director: Thomas Vinterberg</em></p>
+                <p><em> Producer: Kasper Dissing, Sisse Graum Jørgensen</em></p>
+                <p><em>Writer: Thomas Vinterberg, Tobias Lindholm</em></p>
+                <p><em>Release Date (Theaters): Dec 4, 2020 Limited</em></p>
+                <p><em>Release Date (Streaming): Dec 18, 2020</em></p>
+                <p><em>Runtime: 1h 55m</em></p>
+                <p><em>Distributor: Samuel Goldwyn Films </em></p>
+
+            </div>
+
+            <br>
+            <h4>Director</h4>
+            <h5>Thomas Vinterberg</h5>
+            <div class="gallery">
+                <a target="_blank" href="https://www.imdb.com/name/nm0899121/">
+                    <img src="thomas.jpg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+
+            <div class="details">
+                <p><em>Highest Rated: 93% The Hunt (2012)</em></p>
+                <p><em>Lowest Rated: 19% It's All About Love (2003)</em></p>
+                <p><em>Birthday: May 19, 1969</em></p>
+                <p><em>Birthplace: Frederiksberg, Denmark</em></p>
+            </div>
+
+            <p><em>In danger of becoming as well known for his good looks as for his movies, Danish
+                    filmmaker
+                    Thomas
+                    Vinterberg entered into the spirit of child's play with fellow director Lars von
+                    Trier
+                    ("Breaking
+                    the Waves" 1996), taking a "Vow of Chastity" as part of their "Dogma 95" and finding
+                    liberation in
+                    the self-imposed limits. Though the tireless self-promoter won both praise and scorn
+                    for his
+                    half-serious, half tongue-in-cheek embrace of Dogma 95, with some parties sneering
+                    he wasn't
+                    exactly
+                    "reinventing the wheel" by walking in the footprints of Cassavetes, De Sica and
+                    Altman, he
+                    certainly
+                    backed all the talk with a brilliant film adhering to the manifesto's edicts,
+                    "Festen/The
+                    Celebration" (1998), an expertly paced melodrama employing child abuse as a catalyst
+                    to
+                    explore
+                    unbridled machismo, patriarchal arrogance and the prevalence of Danish racism. His
+                    feature
+                    debut,
+                    "De Storste helte/The Greatest Heroes" (1996), had been a fairly typical example of
+                    the
+                    "road movie"
+                    genre and paled in comparison.</em></p>
+
+            <br><br>
+            <h4 id="spider">Spiderman No Way Home</h4>
+            <p><em>For the first time in the cinematic history of Spider-Man, our friendly
+                    neighborhood hero's
+                    identity
+                    is revealed, bringing his Super Hero responsibilities into conflict with his
+                    normal life and
+                    putting
+                    those he cares about most at risk. When he enlists Doctor Strange's help to
+                    restore his
+                    secret, the
+                    spell tears a hole in their world, releasing the most powerful villains
+                    who've ever fought a
+                    Spider-Man in any universe. Now, Peter will have to overcome his greatest
+                    challenge yet,
+                    which will
+                    not only forever alter his own future but the future of the Multiverse.
+                </em></p>
+
+            <div class="details">
+                <p><em>Rating: PG-13 (Sequences of Action/Violence|Brief Suggestive Comments|Some
+                        Language)</em></p>
+                <p><em>Genre: Fantasy, Adventure, Comedy, Action</em></p>
+                <p><em>Original Language: English</em></p>
+                <p><em> Director: Jon Watts</em></p>
+                <p><em>Producer: Kevin Feige, Amy Pascal</em></p>
+                <p><em>Writer: Chris McKenna, Erik Sommers</em></p>
+                <p><em>Release Date (Theaters): Dec 17, 2021 Wide</em></p>
+                <p><em>Box Office (Gross USA): $668.4M</em></p>
+                <p><em>Distributor: Columbia Pictures </em></p>
+                <p><em>Sound Mix: Dolby Digital, Dolby Atmos </em></p>
+                <p><em>Aspect Ratio: Scope (2.35:1) </em></p>
+            </div>
+
+            <br>
+            <h4>Director</h4>
+            <h5>Jon Watts</h5>
+            <div class="gallery">
+                <a target="_blank" href="https://www.imdb.com/name/nm1218281/?ref_=fn_al_nm_1">
+                    <img src="jon.jpg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+
+            <div class="details">
+                <p><em>Highest Rated: 94% The Great Buster: A Celebration (2018)</em></p>
+                <p><em>Lowest Rated: 46% Clown (2014)</em></p>
+                <p><em>Birthday: Jun 28, 1981</em></p>
+                <p><em>Birthplace: Fountain, Colorado, USA</em></p>
+            </div>
+
+            <p><em>Born and raised in the small town of Fountain, Colorado, Jon Watts
+                    turned to
+                    making short
+                    videos
+                    before he graduated from high school. His creative output led to a
+                    scholarship to attend New
+                    York
+                    University. After graduating, Watts joined Park Pictures, a
+                    production
+                    company making music
+                    videos,
+                    internet content, and short films. One of these was a trailer for
+                    "Clown"
+                    (2014), a horror
+                    film they
+                    claimed was directed by Eli Roth. Roth's popularity generated
+                    interest in
+                    the trailer,
+                    eventually
+                    from Roth himself, who contacted Watts and his friends and helped
+                    get the
+                    funding to make
+                    the film.
+                    Released four years after the initial trailer was made, the film was
+                    also
+                    written by Watts
+                    and his
+                    friend Christopher Ford. Watts and Ford again collaborated on the
+                    script for
+                    "Cop Car"
+                    (2015), with
+                    Watts directing Kevin Bacon as a bad cop who crosses paths with a
+                    couple of
+                    unfortunate
+                    kids. The
+                    film was roundly applauded by filmgoers and critics and brought him
+                    to the
+                    attention of
+                    executives
+                    at Marvel, who were looking for someone to bring a vision to the
+                    next
+                    iteration of
+                    "Spider-Man."
+                    Watts, again collaborating with Ford on the script, got the call and
+                    directed "Spiderman:
+                    Homecoming" (2017). The film was largely praised by critics and fans
+                    alike,
+                    who cheered the
+                    successful reimagining of a classic super hero. In 2017 it was
+                    announced
+                    that Watts would
+                    direct a
+                    sequel to the film.
+
+                </em></p>
+
+            <br><br>
+            <h4 id="love">In the Mood for Love</h4>
+            <p><em>In 1962, journalist Chow Mo-wan (Tony Leung Chiu Wai) and his
+                    wife
+                    move into
+                    a Hong Kong
+                    apartment,
+                    but Chow's spouse is often away on business. Before long,
+                    the lonely
+                    Chow
+                    makes the
+                    acquaintance of
+                    the alluring Su Li-zhen (Maggie Cheung Man-yuk), whose own
+                    significant other
+                    also seems
+                    preoccupied
+                    with work. As the two friends realize their respective
+                    partners are
+                    cheating
+                    on them, they
+                    begin to
+                    fall for one another; however, neither wants to stoop to the
+                    level
+                    of the
+                    unfaithful
+                    spouses.</em></p>
+
+            <div class="details">
+                <p><em>Rating: PG (Thematic Elements|Brief Language)</em></p>
+                <p><em>Genre: Romance, Drama</em></p>
+                <p><em>Original Language: Chinese</em></p>
+                <p><em> Director: Kar-Wai Wong</em></p>
+                <p><em>Producer: William Chang</em></p>
+                <p><em>Writer: Kar-Wai Wong</em></p>
+                <p><em>Release Date (Theaters): Feb 26, 2001 Wide</em></p>
+                <p><em>Release Date (Streaming): May 1, 2008</em></p>
+                <p><em>Box Office (Gross USA): $2.7M</em></p>
+                <p><em>Runtime: 1h 37m </em></p>
+                <p><em>Distributor: USA Films, Criterion Collection, Criterion Film
+                        Corp.</em></p>
+                <p><em>Sound Mix: Dolby Stereo, Dolby Digital, Dolby A, Surround,
+                        Dolby
+                        SR</em></p>
+                <p><em>Aspect Ratio: Flat (1.66:1)</em></p>
+            </div>
+
+            <br>
+            <h4>Director</h4>
+            <h5>Kar-Wai Wong</h5>
+            <div class="gallery">
+                <a target="_blank" href="https://www.imdb.com/name/nm0939182/?ref_=nv_sr_srsg_0">
+                    <img src="wong.jpg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+
+            <div class="details">
+                <p><em>Highest Rated: 95% Fallen Angels (1995)</em></p>
+                <p><em>Lowest Rated: 34% Eros (2004)</em></p>
+                <p><em>Birthday: Jul 17, 1958</em></p>
+                <p><em>Birthplace: Shanghai, China</em></p>
+            </div>
+
+            <p><em>Born in Shanghai in 1958, Wong Kar-Wai first studied
+                    graphic
+                    design
+                    then
+                    enrolled in a TV
+                    drama-training program, which provided his
+                    introduction to
+                    filmmaking. Wong
+                    began his career
+                    as a
+                    screenwriter, first earning a co-writing credit for
+                    the
+                    romantic
+                    drama "Once
+                    Upon a Rainbow"
+                    (1982)
+                    and continuing to create in a number of different
+                    genres
+                    including
+                    dramas
+                    and crime
+                    comedies. His
+                    first film as a director was "As Tears Go By" (1987)
+                    an
+                    atmospheric
+                    gangster
+                    movie that had
+                    success
+                    at the Hong Kong box office. Wong's next directorial
+                    effort,
+                    "Days
+                    of Being
+                    Wild" (1990) was
+                    less
+                    successful. A more personal film, set in the 1960's,
+                    it
+                    focused more
+                    on mood
+                    and atmosphere
+                    and
+                    lacked a clear plot. Wong's third film "Chungking
+                    Express"
+                    (1994)
+                    would be
+                    his international
+                    breakthrough. Conceived and shot during a break from
+                    editing
+                    his
+                    epic
+                    martial arts wuxia
+                    "Ashes of
+                    Time" (1994), "Chungking Express" was a quirky
+                    romantic
+                    thriller
+                    that gained
+                    the notice of
+                    Quentin
+                    Tarantino who championed its US release. After
+                    finishing his
+                    vision
+                    of
+                    "Chungking Express"
+                    with the
+                    film "Fallen Angels" (1995), Wong was named Best
+                    Director at
+                    the
+                    Cannes Film
+                    Festival for
+                    his
+                    wrenching romantic drama "Happy Together" (1997).
+                    Next, Wong
+                    completed an
+                    informal trilogy,
+                    which
+                    began with "Days of Being Wild." The next two films
+                    "In the
+                    Mood for
+                    Love"
+                    (2000) and "2046"
+                    (2004),
+                    are again atmospheric reflections on romantic
+                    relationships
+                    in 1960s
+                    Hong
+                    Kong. After making
+                    a short
+                    film to contribute to the anthology "Eros" (2004),
+                    Wong made
+                    his
+                    first
+                    English-language film
+                    and his
+                    first film shot in America. "My Blueberry Nights"
+                    (2007) the
+                    film
+                    starred
+                    Norah Jones with
+                    Jude Law
+                    and Natalie Portman taking supporting roles in
+                    another
+                    examination
+                    of
+                    challenging romantic
+                    relationships. 2013 saw the release of "The
+                    Grandmaster"
+                    (2013), a
+                    biopic
+                    focusing on the
+                    early life
+                    of legendary martial arts teacher Ip Man. </em></p>
+
+            <br><br>
+            <h4 id="nomad">Nomadland</h4>
+            <p><em>Following the economic collapse of a company
+                    town in
+                    rural
+                    Nevada,
+                    Fern packs
+                    her van and
+                    sets off on
+                    the road exploring a life outside of
+                    conventional
+                    society as
+                    a
+                    modern-day
+                    nomad. As she
+                    journeys
+                    across the vast landscape of the American
+                    West, she
+                    meets
+                    people who
+                    become
+                    her mentors and
+                    comrades.</em> </p>
+
+            <div class="details">
+                <p><em>Rating: R (Some Full Nudity)</em></p>
+                <p><em>Genre: Drama</em></p>
+                <p><em>Original Language: English</em></p>
+                <p><em> Director: Chloé Zhao</em></p>
+                <p><em>Producer: Frances McDormand, Peter Spears,
+                        Mollye
+                        Asher, Dan
+                        Janvey,
+                        Chloé
+                        Zhao</em></p>
+                <p><em>Writer: Chloé Zhao</em></p>
+                <p><em>Release Date (Theaters): Feb 19, 2021
+                        Wide</em></p>
+                <p><em>Release Date (Streaming): Feb 19, 2021</em>
+                </p>
+                <p><em>Runtime: 1h 48m</em></p>
+                <p><em>Distributor: Searchlight Pictures </em></p>
+                <p><em>Sound Mix: DTS, Dolby Digital, Dolby
+                        Atmos</em></p>
+                <p><em>Aspect Ratio: Scope (2.35:1)</em></p>
+            </div>
+
+            <br>
+            <h4>Director</h4>
+            <h5>Chloé Zhao</h5>
+            <div class="gallery">
+                <a target="_blank" href="https://www.imdb.com/name/nm2125482/?ref_=fn_al_nm_1">
+                    <img src="chloe.jpg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+
+            <div class="details">
+                <p><em>Highest Rated: 97% The Rider
+                        (2017)</em></p>
+                <p><em>Lowest Rated: 47% Eternals
+                        (2021)</em></p>
+                <p><em>Birthday: Mar 31, 1982</em></p>
+                <p><em>Birthplace: Beijing, China</em></p>
+            </div>
+
+            <p><em>Chloe Zhao's life was primarilyguided by a
+                    quest for
+                    information.
+                    Born in
+                    China, she grew up
+                    in a
+                    place where she felt trapped, like
+                    she was
+                    never
+                    going to
+                    get out.
+                    When her
+                    family finally
+                    moved
+                    away to London when she was in high
+                    school,
+                    she then
+                    researched and
+                    learned
+                    what she had
+                    missed
+                    being in China. She was able to
+                    separate
+                    what was
+                    true about
+                    her
+                    home
+                    country and what was
+                    false,
+                    which led her to studying Political
+                    Science
+                    at Mount
+                    Holyoke
+                    College
+                    in
+                    Massachusetts.
+                    However, her
+                    time studying politics made her
+                    disenfranchised by
+                    the
+                    subject. Her
+                    fascination with
+                    politics was
+                    about learning people's stories, so
+                    she
+                    decided to
+                    transition into
+                    film.
+                    Attending NYU's
+                    graduate
+                    film program, she began to create
+                    short
+                    films
+                    starting in
+                    2008. She
+                    wrote
+                    and directed her
+                    first
+                    short "Post" (2008), which led her
+                    to create
+                    "The
+                    Atlas
+                    Mountains"
+                    (2009)
+                    and "Daughters"
+                    (2010).
+                    After finishing up school, Zhao
+                    started work
+                    on a
+                    project
+                    that would
+                    soon
+                    consume the next
+                    four
+                    years of her life. She began working
+                    on a
+                    screenplay
+                    for a
+                    film
+                    based on the
+                    Pine Ridge
+                    Indian
+                    Reservation that was originally
+                    called
+                    "Lee." The
+                    project,
+                    which
+                    eventually
+                    was a
+                    Kickstarter
+                    success story in 2013, focuses on
+                    the trials
+                    and
+                    tribulations of
+                    Lakota
+                    teens. Zhao learned
+                    the
+                    group's stories, and even casted a
+                    large
+                    number of
+                    the
+                    people she
+                    talked to
+                    in the film. Now
+                    called
+                    "Songs My Brothers Taught Me"
+                    (2015), the
+                    film
+                    premiered at
+                    Sundance
+                    in
+                    2015.</em></p>
+        </div>
+    </div>
+
+    <div id="comment" style="padding-bottom: 120px; padding-top: 80px;">
+        <div class="container">
+            <h1>Comments</h1>
+            <div class="col-md-6">
+                <form>
+
+                    <div class="form-group">
+                        <label for="firstName">First
+                            Name:</label>
+                        <input type="text" class="form-control form-control-lg" id="firstName" placeholder="First Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last
+                            Name:</label>
+                        <input type="text" class="form-control form-control-lg" id="lastName" placeholder="Last Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedback">Have you
+                            watched
+                            any of
+                            the above
+                            movies?
+                            If you
+                            have watched,
+                            your
+                            feedback:</label>
+                        <textarea rows="5" class="form-control form-control-lg" id="feedback"
+                            placeholder="Your feedback..."></textarea>
+                    </div>
+
+                    <!-- kullanıcının oy kullanabileceği yıldız kısmı -->
+                    <p style="font-size: larger;">Ratings:</p>
+                    <span class="stars">
+                        <i class="star1-hover fa fa-star-o"></i>
+                        <i class="star2-hover fa fa-star-o"></i>
+                        <i class="star3-hover fa fa-star-o"></i>
+                        <i class="star4-hover fa fa-star-o"></i>
+                        <i class="star5-hover fa fa-star-o"></i>
+                        <span class="average"></span>
+                    </span>
+
+                    <script>
+                        $(document).ready(function () {
+                            $(".star1-hover").hover(function () {
+                                $(".star1-hover").removeClass("fa-star-o").addClass("fa-star");
+                                $(".star2-hover,.star3-hover,.star4-hover,.star5-hover").removeClass("fa-star").addClass("fa-star-o");
+                            }, function () {
+                                $(".star1-hover,.star2-hover,.star3-hover,.star4-hover,.star5-hover").removeClass("fa-star").addClass("fa-star-o");
+                            });
+
+                            $(".star2-hover").hover(function () {
+                                $(".star1-hover,.star2-hover").removeClass("fa-star-o").addClass("fa-star");
+                                $(".star3-hover,.star4-hover,.star5-hover").removeClass("fa-star").addClass("fa-star-o");
+                            }, function () {
+                                $(".star1-hover,.star2-hover,.star3-hover,.star4-hover,.star5-hover").removeClass("fa-star").addClass("fa-star-o");
+                            });
+
+                            $(".star3-hover").hover(function () {
+                                $(".star1-hover,.star2-hover,.star3-hover").removeClass("fa-star-o").addClass("fa-star");
+                                $(".star4-hover,.star5-hover").removeClass("fa-star").addClass("fa-star-o");
+                            }, function () {
+                                $(".star1-hover,.star2-hover,.star3-hover,.star4-hover,.star5-hover").removeClass("fa-star").addClass("fa-star-o");
+                            });
+
+                            $(".star4-hover").hover(function () {
+                                $(".star1-hover,.star2-hover,.star3-hover,.star4-hover").removeClass("fa-star-o").addClass("fa-star");
+                                $(".star5-hover").removeClass("fa-star").addClass("fa-star-o");
+                            }, function () {
+                                $(".star1-hover,.star2-hover,.star3-hover,.star4-hover,.star5-hover").removeClass("fa-star").addClass("fa-star-o");
+                            });
+
+                            $(".star5-hover").hover(function () {
+                                $(".star1-hover,.star2-hover,.star3-hover,.star4-hover,.star5-hover").removeClass("fa-star-o").addClass("fa-star");
+                            }, function () {
+                                $(".star1-hover,.star2-hover,.star3-hover,.star4-hover,.star5-hover").removeClass("fa-star").addClass("fa-star-o");
+                            });
+
+                            $(".star1-hover").click(function () {
+                                $(".average").text("1 puan verdiniz...")
+                            });
+
+                            $(".star2-hover").click(function () {
+                                $(".average").text("2 puan verdiniz...")
+                            });
+
+                            $(".star3-hover").click(function () {
+                                $(".average").text("3 puan verdiniz...")
+                            });
+
+                            $(".star4-hover").click(function () {
+                                $(".average").text("4 puan verdiniz...")
+                            });
+
+                            $(".star5-hover").click(function () {
+                                $(".average").text("5 puan verdiniz...")
+                            });
+                        });
+                    </script>
+                    <p></p>
+                    <button type="submit" class="btn btn-success">Send</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

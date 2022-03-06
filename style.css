@@ -1,0 +1,162 @@
+html {
+    scroll-behavior: smooth
+}
+
+
+h1,h4{
+    padding-top: 70px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;  
+    color: #275f80; 
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+h1{
+    color: #1d4358; 
+    font-size: 3rem;
+}
+
+h2{
+    text-align: auto ;
+    padding-top: 70px;
+    font-size: 2rem;
+}
+h5{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+body {
+
+    font-family: "Times New Roman", Times, serif; 
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: justify;
+    min-height: 800px;
+    background: #96bed6;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #96bed6 0%, #e4cce4 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #96bed6), color-stop(100%, #e4cce4));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #96bed6 0%, #e4cce4 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #96bed6 0%, #e4cce4 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #96bed6 0%, #e4cce4 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #96bed6 0%, #e4cce4 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#96bed6', endColorstr='#e4cce4', GradientType=0);
+    /* IE6-9 */
+    position: relative;
+}
+
+
+div.gallery {
+    margin: 10%;
+    border: 1px solid rgb(204, 204, 204);
+    float: left;
+    width: 250px;
+    
+}
+
+div.gallery:hover {
+    border: 10px solid rgba(119, 119, 119, 0.63);
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+/* film isimlerinin yazildigi alanin boyutu */
+div.desc {
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar{  
+    background-color:#275f80;
+    
+}
+.navbar .navbar-brand{
+    color: rgb(240, 240, 240);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.navbar .navbar-brand:hover{
+    color:rgb(196, 196, 196);
+    background-color: #1f4f6b;
+    border-radius: 10px;
+}
+.navbar .nav-item {
+    padding: 0 18px;
+    font-family: "Times New Roman", Times, serif;    
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    font-weight:lighter;
+   
+}
+.navbar .nav-link:hover { 
+    text-decoration: underline;
+}
+  
+
+#testimonial{
+    width: 100%;
+    height: 20%;
+    margin: auto;
+    background-color: #275f80;
+    color: rgb(240, 240, 240);
+}
+#testimonial p{
+    font-family: "Times New Roman", Times, serif;    
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    font-weight:lighter;
+
+}
+.details{
+    font-weight: bold;
+}
+
+.container-fluid{
+    padding: 5% 10%;
+  }
+
+#home.container-fluid{
+    margin: auto auto;
+    position: relative;
+}
+
+.desc{
+    font-family: "Times New Roman", Times, serif;  
+    color: #275f80;  
+
+}
+.form-group{
+    font-size: 1.5rem;
+}
+
+.fa-star-o {
+    font-size: 20px;
+    color: #808080;
+}
+ 
+.fa-star-half-o {
+    font-size: 20px;
+    color: #cac251;
+}
+ 
+.fa-star {
+    font-size: 20px;
+    color: #cac251;
+}
+ 
+.average {
+    font-size: 18px;
+    color: #cac251;
+    padding-left: 10px;
+}

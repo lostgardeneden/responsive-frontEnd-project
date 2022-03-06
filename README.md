@@ -1,2 +1,2 @@
-# responsive front-end project
+# responsive-frontend-project
  
